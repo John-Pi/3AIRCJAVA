@@ -2,6 +2,7 @@ package launcher.localLauncher;
 
 import java.util.Observer;
 
+import model.observable.ChessGame;
 import vue.ChessGameCmdLine;
 import controler.controlerLocal.ChessGameControler;
 

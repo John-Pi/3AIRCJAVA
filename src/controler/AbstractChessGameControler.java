@@ -2,7 +2,7 @@ package controler;
 
 import model.Coord;
 import model.Couleur;
-import launcher.localLauncher.ChessGame;
+import model.observable.ChessGame;
 
 
 /**
