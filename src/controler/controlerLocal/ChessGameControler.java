@@ -1,7 +1,7 @@
 package controler.controlerLocal;
 
 import model.Coord;
-import model.observable.ChessGame;
+import controler.ChessGame;
 import controler.AbstractChessGameControler;
 
 /**

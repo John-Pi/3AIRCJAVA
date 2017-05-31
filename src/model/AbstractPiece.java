@@ -13,14 +13,14 @@ public abstract class AbstractPiece implements Pieces {
         this.coord = coord;
     }
 
-    public String toString(){
-        return this.getName()+" "+this.coord.toString();
+    public String toString() {
+        return this.getName() + " " + this.coord.toString();
     }
 
     @Override
     public boolean capture() {
         isCaptured = true;
-        move(-1,-1);
+        move(-1, -1);
         return isCaptured;
     }
 

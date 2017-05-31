@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 
 import controler.ChessGameControlers;
 import controler.controlerLocal.ChessGameControler;
-import model.observable.ChessGame;
+import controler.ChessGame;
 import vue.ChessGameGUI;
 
 

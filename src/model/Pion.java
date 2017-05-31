@@ -13,6 +13,7 @@ public class Pion extends AbstractPiece {
 
     @Override
     public boolean isMoveOk(int xFinal, int yFinal, boolean isCatchOk, boolean isCastlingPossible) {
-        return false;
+
+        return ((xFinal!=getX())&&(yFinal==getY()));
     }
 }

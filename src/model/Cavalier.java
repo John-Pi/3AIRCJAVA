@@ -10,7 +10,7 @@ import static java.lang.Math.abs;
  * Created by Johnpi on 31/05/2017.
  */
 public class Cavalier extends AbstractPiece {
-    Cavalier(Couleur couleur, Coord coord) {
+    public Cavalier(Couleur couleur, Coord coord) {
         super(couleur, coord);
     }
 
