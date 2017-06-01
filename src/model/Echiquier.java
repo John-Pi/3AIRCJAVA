@@ -24,7 +24,7 @@ public class Echiquier implements BoardGames {
     public boolean move(int xInit, int yInit, int xFinal, int yFinal) {
         if (isMoveOk(xInit,yInit,xFinal,yFinal)){
             jeuCourant.move(xInit,yInit,xFinal,yFinal);
-            this.setMessage("move OK");
+
             return true;
         }
         else {
@@ -82,7 +82,12 @@ public class Echiquier implements BoardGames {
         }
     }
     public boolean isMoveOk(int xInit, int yInit, int xFinal, int yFinal){
-        return (jeuCourant.isMoveOk(xInit,yInit, xFinal,yFinal,true,true));
+        if(jeuCourant.isMoveOk(xInit,yInit, xFinal,yFinal,true,true)){
+            setMessage("Move Ok");
+            return true;
+        }
+        setMessage("Move non Ok");
+        return false;
     }
 
 }
