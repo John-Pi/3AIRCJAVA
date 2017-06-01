@@ -10,13 +10,13 @@ public class Echiquier implements BoardGames {
 
     public Jeu jeuBlanc;
     public Jeu jeuNoir;
-    public Jeu jeuCourant = jeuBlanc;
+    public Jeu jeuCourant;
     public Jeu jeuNonCourant ;
     private String message ;
     public Echiquier() {
         jeuBlanc = new Jeu(Couleur.BLANC);
         jeuNoir = new Jeu(Couleur.NOIR);
-
+        jeuCourant = jeuBlanc;
     }
 
 
@@ -24,9 +24,14 @@ public class Echiquier implements BoardGames {
     public boolean move(int xInit, int yInit, int xFinal, int yFinal) {
         if (isMoveOk(xInit,yInit,xFinal,yFinal)){
             jeuCourant.move(xInit,yInit,xFinal,yFinal);
+            setMessage("move OK");
             return true;
         }
-        return false;
+        else {
+            setMessage("move non OK");
+            return false;
+        }
+
     }
     public List<PieceIHMs> getPiecesIHM(){
         List<PieceIHMs> list = new LinkedList<PieceIHMs>();
