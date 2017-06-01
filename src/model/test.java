@@ -15,8 +15,8 @@ public class test {
         System.out.println(jeu1.toString());
         BoardGames echec = new Echiquier();
         System.out.println(echec.toString());
-        Pieces pion = new Pion(Couleur.BLANC,new Coord(3,6));
-        System.out.println(pion.isMoveOk(3,4,true,true));
+        Pieces pion = new Pion(Couleur.BLANC,new Coord(3,2));
+        System.out.println(pion.isMoveOk(3,1,true,true));
 
     }
 }
