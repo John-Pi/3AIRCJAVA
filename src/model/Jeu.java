@@ -3,6 +3,7 @@ package model;
 import tools.ChessPiecesFactory;
 
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -74,6 +75,19 @@ public class Jeu implements Game {
     @Override
     public boolean capture(int xCatch, int yCatch) {
         return false;
+    }
+
+
+    public List<PieceIHMs> getPiecesIHM(){
+        PieceIHMs newPieceIHM = null;
+        List<PieceIHMs> list = new LinkedList<PieceIHMs>();
+        for (Pieces piece : listPiece){
+            if (piece.getX() != -1){
+                newPieceIHM = new PieceIHM(piece);
+                list.add(newPieceIHM);
+            }
+        }
+        return list;
     }
 
 }

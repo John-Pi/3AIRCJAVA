@@ -13,6 +13,8 @@ public class test {
         System.out.println(fou.isMoveOk(2, 2, true, true));
         Game jeu1 = new Jeu(Couleur.BLANC);
         System.out.println(jeu1.toString());
+        BoardGames echec = new Echiquier();
+        System.out.println(echec.toString());
 
     }
 }
