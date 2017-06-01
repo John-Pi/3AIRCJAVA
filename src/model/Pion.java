@@ -1,5 +1,4 @@
 package model;
-
 import model.AbstractPiece;
 
 /**
@@ -13,7 +12,12 @@ public class Pion extends AbstractPiece {
 
     @Override
     public boolean isMoveOk(int xFinal, int yFinal, boolean isCatchOk, boolean isCastlingPossible) {
-
-        return ((xFinal!=getX())&&(yFinal==getY()));
+        boolean ret = false;
+        if("BLANC".equals(this.getCouleur())){
+            return yFinal < getY();
+        }
+        else{
+            return yFinal > getY();
+        }
     }
 }
