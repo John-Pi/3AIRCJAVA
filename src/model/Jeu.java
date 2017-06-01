@@ -91,6 +91,13 @@ public class Jeu implements Game {
     }
 
     public Couleur getPieceColor(int x, int y) {
-        return findPiece(x,y).getCouleur();
+        Pieces piece ;
+        piece = findPiece(x,y);
+        if (piece != null){
+            return piece.getCouleur();
+        }
+        else {
+            return null;
+        }
     }
 }
