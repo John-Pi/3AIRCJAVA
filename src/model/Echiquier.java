@@ -10,7 +10,7 @@ public class Echiquier implements BoardGames {
 
     public Jeu jeuBlanc;
     public Jeu jeuNoir;
-    public Jeu jeuCourant ;
+    public Jeu jeuCourant = jeuBlanc;
     public Jeu jeuNonCourant ;
     private String message ;
     public Echiquier() {
@@ -50,13 +50,19 @@ public class Echiquier implements BoardGames {
 
     @Override
     public Couleur getColorCurrentPlayer() {
-        return null;
+        if (jeuCourant == jeuBlanc){
+            return Couleur.BLANC;
+        }
+        else {
+            return Couleur.NOIR;
+        }
     }
 
     @Override
     public Couleur getPieceColor(int x, int y) {
-        return null;
-    }
+        return jeuCourant.getPieceColor(x,y);
+        }
+
     public String toString(){
         return jeuBlanc.toString()+"" +jeuNoir.toString();
     }

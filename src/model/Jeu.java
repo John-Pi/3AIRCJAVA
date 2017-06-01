@@ -90,4 +90,7 @@ public class Jeu implements Game {
         return list;
     }
 
+    public Couleur getPieceColor(int x, int y) {
+        return findPiece(x,y).getCouleur();
+    }
 }
