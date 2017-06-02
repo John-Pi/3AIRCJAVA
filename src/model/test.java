@@ -1,5 +1,7 @@
 package model;
 
+import launcher.localLauncher.LauncherCmdLine;
+
 /**
  * Created by Johnpi on 31/05/2017.
  */

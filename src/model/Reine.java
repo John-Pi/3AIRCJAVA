@@ -2,7 +2,7 @@ package model;
 
 /**
  *
- * @author nrmv4488
+ * @author Jean Multigner et Delphine Collin
  */
 public class Reine extends AbstractPiece{
 
