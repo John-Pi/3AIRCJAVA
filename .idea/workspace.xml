@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aaa50cc-a9d5-485e-be30-7ab50fffd73b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controler/ChessGame.java" afterPath="$PROJECT_DIR$/src/controler/ChessGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controler/ChessGameControlers.java" afterPath="$PROJECT_DIR$/src/controler/ChessGameControlers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controler/controlerLocal/ChessGameControler.java" afterPath="$PROJECT_DIR$/src/controler/controlerLocal/ChessGameControler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Fou.java" afterPath="$PROJECT_DIR$/src/model/Fou.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vue/ChessGameGUI.java" afterPath="$PROJECT_DIR$/src/vue/ChessGameGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Pion.java" afterPath="$PROJECT_DIR$/src/model/Pion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Reine.java" afterPath="$PROJECT_DIR$/src/model/Reine.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,20 +21,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChessGameCmdLine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vue/ChessGameCmdLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="53" />
-              <folding>
-                <element signature="e#603#604#0" expanded="true" />
-                <element signature="e#654#655#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChessGameGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChessGameGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/ChessGameGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="744">
@@ -46,6 +29,26 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Reine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pion.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/Pion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,10 +71,7 @@
             <state relative-caret-position="527">
               <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding>
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#841#842#0" expanded="true" />
-                <element signature="e#913#914#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -83,7 +83,14 @@
             <state relative-caret-position="1309">
               <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1995#1996#0" expanded="false" />
+                <element signature="e#2035#2036#0" expanded="false" />
+                <element signature="e#2069#2070#0" expanded="false" />
+                <element signature="e#2114#2115#0" expanded="false" />
+                <element signature="e#2161#2162#0" expanded="false" />
+                <element signature="e#2217#2218#0" expanded="false" />
+                <element signature="e#2267#2268#0" expanded="false" />
+                <element signature="e#2319#2320#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -118,16 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
               <caret line="31" column="74" lean-forward="false" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChessPiecePos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tools/ChessPiecePos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -169,11 +166,9 @@
         <option value="$PROJECT_DIR$/src/model/AbstractPiece.java" />
         <option value="$PROJECT_DIR$/out/production/Projet/model/test.class" />
         <option value="$PROJECT_DIR$/src/model/Tour.java" />
-        <option value="$PROJECT_DIR$/src/model/Reine.java" />
         <option value="$PROJECT_DIR$/src/launcher/localLauncher/LauncherCmdLine.java" />
         <option value="$PROJECT_DIR$/src/model/Jeu.java" />
         <option value="$PROJECT_DIR$/src/model/test.java" />
-        <option value="$PROJECT_DIR$/src/model/Pion.java" />
         <option value="$PROJECT_DIR$/src/model/Echiquier.java" />
         <option value="$PROJECT_DIR$/src/tools/JPanelCustom.java" />
         <option value="$PROJECT_DIR$/src/launcher/localLauncher/LauncherGUI.java" />
@@ -183,6 +178,8 @@
         <option value="$PROJECT_DIR$/src/controler/ChessGameControlers.java" />
         <option value="$PROJECT_DIR$/src/controler/controlerLocal/ChessGameControler.java" />
         <option value="$PROJECT_DIR$/src/vue/ChessGameGUI.java" />
+        <option value="$PROJECT_DIR$/src/model/Reine.java" />
+        <option value="$PROJECT_DIR$/src/model/Pion.java" />
       </list>
     </option>
   </component>
@@ -901,7 +898,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38350055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38350055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -973,6 +970,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="e#347#348#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1050,6 +1050,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#347#348#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,19 +1060,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/Projet/model/Pion.class" />
     <entry file="file://$PROJECT_DIR$/out/production/Projet/model/Tour.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Reine.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Reine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/Projet/tools/ChessSinglePieceFactory.class" />
     <entry file="file://$PROJECT_DIR$/out/production/Projet/tools/ChessPiecesFactory.class" />
     <entry file="file://$PROJECT_DIR$/out/production/Projet/model/test.class" />
@@ -1140,13 +1137,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Pion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,10 +1230,7 @@
         <state relative-caret-position="527">
           <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
           <folding>
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1252,7 +1240,14 @@
         <state relative-caret-position="1309">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1995#1996#0" expanded="false" />
+            <element signature="e#2035#2036#0" expanded="false" />
+            <element signature="e#2069#2070#0" expanded="false" />
+            <element signature="e#2114#2115#0" expanded="false" />
+            <element signature="e#2161#2162#0" expanded="false" />
+            <element signature="e#2217#2218#0" expanded="false" />
+            <element signature="e#2267#2268#0" expanded="false" />
+            <element signature="e#2319#2320#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1264,6 +1259,22 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Reine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Pion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
