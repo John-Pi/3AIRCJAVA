@@ -85,8 +85,12 @@ public class ChessGameGUI extends JFrame implements MouseListener, MouseMotionLi
 
         if (c instanceof JPanelCustom)
             return;
+
         saveLocation =   c.getParent();
         this.pieceClicked = (JPanelCustom) c.getParent();
+
+        if (!controler.isPlayerOK(pieceClicked.getCoord()))
+            return;
         isPossible(pieceClicked.getCoord());
         Point parentLocation = c.getParent().getLocation();
         xAdjustment = parentLocation.x - e.getX();
@@ -116,14 +120,10 @@ public class ChessGameGUI extends JFrame implements MouseListener, MouseMotionLi
         if (c instanceof JLabel) {
             c = c.getParent();
         }
-        if (this.controler.move(this.pieceClicked.getCoord(), ((JPanelCustom) c).getCoord())) {
+        this.controler.move(this.pieceClicked.getCoord(), ((JPanelCustom) c).getCoord());
             chessPiece.setVisible(false);
-        }
-        else{
-            ((Container)saveLocation).add( chessPiece );
-            chessPiece.setVisible(true);
+        
 
-        }
 
     }
 
