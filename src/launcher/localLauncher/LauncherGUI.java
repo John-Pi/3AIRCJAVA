@@ -1,4 +1,4 @@
-/*
+
 package launcher.localLauncher;
 
 import java.awt.Dimension;
@@ -13,21 +13,20 @@ import vue.ChessGameGUI;
 
 
 
-*/
 /**
  * @author francoise.perrin
  * Lance l'exécution d'un jeu d'échec en mode graphique.
  * La vue (ChessGameGUI) observe le modèle (ChessGame)
  * les échanges passent par le contrôleur (ChessGameControlers)
  *
- *//*
+ */
 
 public class LauncherGUI {
 
-    */
+
 /**
      * @param args
-     *//*
+     */
 
     public static void main(String[] args) {
 
@@ -36,7 +35,7 @@ public class LauncherGUI {
         JFrame frame;
         Dimension dim;
 
-        dim = new Dimension(700, 700);
+        dim = new Dimension(800, 800);
 
         chessGame = new ChessGame();
         chessGameControler = new ChessGameControler(chessGame);
@@ -51,4 +50,4 @@ public class LauncherGUI {
         frame.setVisible(true);
     }
 }
-*/
+
