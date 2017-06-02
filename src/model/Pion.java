@@ -1,4 +1,5 @@
 package model;
+
 import model.AbstractPiece;
 
 /**
@@ -32,6 +33,21 @@ public class Pion extends AbstractPiece {
             return false;
         }
         return false;
+    }
+
+    public boolean canCapture(int xFinal, int yFinal) {
+        if (getCouleur() == Couleur.BLANC) {
+            if (yFinal < getY()) {
+                return Math.abs(xFinal - this.getX()) == Math.abs(yFinal - this.getY()) && (xFinal - this.getX() == 1);
+            }
+            return false;
+        } else {
+            if (yFinal > getY()) {
+                return Math.abs(xFinal - this.getX()) == Math.abs(yFinal - this.getY()) && (xFinal - this.getX() == 1);
+            }
+            return false;
+
+        }
     }
 }
 

@@ -63,7 +63,9 @@ public class Jeu implements Game {
         if (piece != null) {
             if (piece.isMoveOk(xFinal, yFinal, true, true)) {
                 return true;
-            } else {
+            }
+
+            else {
                 return false;
             }
         } else {
@@ -89,6 +91,7 @@ public class Jeu implements Game {
 
     @Override
     public boolean capture(int xCatch, int yCatch) {
+
         findPiece(xCatch, yCatch).capture();
         return true;
     }
