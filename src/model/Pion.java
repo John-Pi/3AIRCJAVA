@@ -12,11 +12,26 @@ public class Pion extends AbstractPiece {
 
     @Override
     public boolean isMoveOk(int xFinal, int yFinal, boolean isCatchOk, boolean isCastlingPossible) {
-        if(Couleur.BLANC == this.getCouleur()){
-            return yFinal < getY() && xFinal == getX();
+        if (xFinal == getX()) {
+
+            if (getY() == 6 && getCouleur() == Couleur.BLANC) {
+                return (Math.abs(yFinal - getY()) <= 2) && yFinal < getY();
+            }
+            if (getY() != 6 && getCouleur() == Couleur.BLANC) {
+                return (Math.abs(yFinal - getY()) == 1) && yFinal < getY();
+            }
+            if (getY() == 1 && getCouleur() == Couleur.NOIR) {
+                return (Math.abs(yFinal - getY()) <= 2) && yFinal > getY();
+            }
+            if (getY() != 1 && getCouleur() == Couleur.NOIR) {
+                return (Math.abs(yFinal - getY()) == 1) && yFinal > getY();
+            }
+
+
+        } else {
+            return false;
         }
-        else{
-            return yFinal > getY() && xFinal == getX();
-        }
+        return false;
     }
 }
+

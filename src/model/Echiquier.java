@@ -82,12 +82,83 @@ public class Echiquier implements BoardGames {
         }
     }
     public boolean isMoveOk(int xInit, int yInit, int xFinal, int yFinal){
-        if(jeuCourant.isMoveOk(xInit,yInit, xFinal,yFinal,true,true)){
+        if(jeuCourant.isMoveOk(xInit,yInit, xFinal,yFinal,true,true) ){
             setMessage("Move Ok");
             return true;
         }
         setMessage("Move non Ok");
         return false;
+    }
+    private boolean somethingOnRoad(int xInit, int yInit, int xFinal, int yFinal) {
+        boolean thereIsOne = false;
+
+        //Si on est pas un cavalier
+        if(!jeuCourant.getPieceName(xInit, yInit).equals("Cavalier")) {
+            //Déplacement horizontal
+            if(yInit == yFinal && xInit != xFinal) {
+                if(xInit < xFinal) {
+                    for(int i = 1; i < xFinal - xInit; i++) {
+                        if(jeuCourant.isPieceHere(xInit + i, yFinal) || jeuNonCourant.isPieceHere(xInit + i, yFinal)) {
+                            thereIsOne = true;
+                        }
+                    }
+                } else {
+                    for(int i = 1; i < xInit - xFinal; i++) {
+                        if(jeuCourant.isPieceHere(xFinal + i, yFinal) || jeuNonCourant.isPieceHere(xFinal + i, yFinal)) {
+                            thereIsOne = true;
+                        }
+                    }
+                }
+            } else if(yInit != yFinal && xInit == xFinal) { //Déplacement vertical
+                if(yInit < yFinal) {
+                    for(int i = 1; i < yFinal - yInit; i++) {
+                        if(jeuCourant.isPieceHere(xFinal, yInit + i) || jeuNonCourant.isPieceHere(xFinal, yInit + i)) {
+                            thereIsOne = true;
+                        }
+                    }
+                } else {
+                    for(int i = 1; i < yInit - yFinal; i++) {
+                        if(jeuCourant.isPieceHere(xFinal, yFinal + i) || jeuNonCourant.isPieceHere(xFinal, yFinal + i)) {
+                            thereIsOne = true;
+                        }
+                    }
+                }
+                //Test particulier pour pion
+                if((jeuCourant.getPieceName(xInit, yInit).equals("Pion")) && (jeuNonCourant.isPieceHere(xFinal, yFinal))) {
+                    thereIsOne = true;
+                }
+            } else {
+                //Déplacement diagonale restant uniquement
+                if(xFinal - xInit > 0 && yFinal - yInit < 0) {
+                    for(int i = 1; i < xFinal - xInit; i++) {
+                        if(jeuCourant.isPieceHere(xInit + i, yInit - i) || jeuNonCourant.isPieceHere(xInit + i, yInit - i)) {
+                            thereIsOne = true;
+                        }
+                    }
+                } else if(xFinal - xInit < 0 && yFinal - yInit < 0) {
+                    for(int i = 1; i < xInit - xFinal; i++) {
+                        if(jeuCourant.isPieceHere(xInit - i, yInit - i) || jeuNonCourant.isPieceHere(xInit - i, yInit - i)) {
+                            thereIsOne = true;
+                        }
+                    }
+                } else if(xFinal - xInit < 0 && yFinal - yInit > 0) {
+                    for(int i = 1; i < xInit - xFinal; i++) {
+                        if(jeuCourant.isPieceHere(xInit - i, yInit + i) || jeuNonCourant.isPieceHere(xInit - i, yInit + i)) {
+                            thereIsOne = true;
+                        }
+                    }
+                } else {
+                    for(int i = 1; i < xFinal - xInit; i++) {
+                        if(jeuCourant.isPieceHere(xInit + i, yInit + i) || jeuNonCourant.isPieceHere(xInit + i, yInit + i)) {
+                            thereIsOne = true;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        return thereIsOne;
     }
 
 }
