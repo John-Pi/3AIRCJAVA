@@ -1,7 +1,11 @@
 package model;
 
 /**
- * Created by Johnpi on 31/05/2017.
+ * Created by Jean Multigner et Delphine Collin
+ * 
+ * Cette classe abstraite implémente toutes les comportements communs des pices.
+ * Seule isMove() doit etre implementee selon la piece
+ * 
  */
 public abstract class AbstractPiece implements Pieces {
     Coord coord;
@@ -13,11 +17,17 @@ public abstract class AbstractPiece implements Pieces {
         this.coord = coord;
     }
 
+    @Override
     public String toString() {
         return this.getName() + " " + this.coord.toString();
     }
 
     @Override
+    /*
+    * Cette methode sort la piece capturee de l'echiquier en positionnant son
+    * x et y a -1
+    * @return true si la piece est capturee
+    */
     public boolean capture() {
         isCaptured = true;
         move(-1, -1);
@@ -44,13 +54,19 @@ public abstract class AbstractPiece implements Pieces {
         return coord.y;
     }
 
+    /*
+    * @return true si le deplacement est effectue
+    */
     @Override
     public boolean move(int xFinal, int yFinal) {
         coord.x = xFinal;
         coord.y = yFinal;
         return true;
     }
-
+    
+    /*
+    * @return true si deplacement legal en fonction des algo de déplacement specifique de chaque piece
+    */
     public abstract boolean isMoveOk(int xFinal,
                                      int yFinal,
                                      boolean isCatchOk,
