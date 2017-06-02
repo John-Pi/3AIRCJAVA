@@ -28,7 +28,12 @@ public class ChessGameControler extends AbstractChessGameControler {
 	public boolean isPlayerOK(Coord initCoord) {
 		return   chessGame.getPieceColor(initCoord.x,initCoord.y) != null;
 	}
-	
+
+	@Override
+	public boolean isMoveOk(int xInit, int yInit, int xFinal, int yFinal) {
+		return  chessGame.isMoveOk(xInit, yInit, xFinal, yFinal);
+	}
+
 	/* (non-Javadoc)
 	 * @see controler.AbstractChessGameControler#endMove(model.Coord, model.Coord, java.lang.String)
 	 * 

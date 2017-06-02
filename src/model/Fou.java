@@ -11,12 +11,14 @@ public class Fou extends AbstractPiece {
 
     @Override
     public boolean isMoveOk(int xFinal, int yFinal, boolean isCatchOk, boolean isCastlingPossible) {
-        boolean ret = false;
-        if (Coord.coordonnees_valides(xFinal, yFinal) == true) {
-            if (xFinal - this.coord.x == yFinal - this.coord.y) {
+        if(Coord.coordonnees_valides(xFinal, yFinal)) {
+            if(Math.abs(xFinal - this.getX()) == Math.abs(yFinal - this.getY())) {
                 return true;
+            } else {
+                return false;
             }
+        } else {
+            return false;
         }
-        return ret;
     }
 }
