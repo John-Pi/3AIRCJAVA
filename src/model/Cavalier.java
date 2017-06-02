@@ -16,10 +16,13 @@ public class Cavalier extends AbstractPiece {
 
     @Override
     public boolean isMoveOk(int xFinal, int yFinal, boolean isCatchOk, boolean isCastlingPossible) {
-        if (xFinal != this.getX() && yFinal != getY()) {
-            if (((xFinal - getX() == 3) && (yFinal - getY() == 1)
-                    || (xFinal - getX() == 1) && (yFinal - getY() == 3))) {
-                return true;
+        if(Coord.coordonnees_valides(xFinal, yFinal)) {
+            if((Math.abs(xFinal - this.getX()) + Math.abs(yFinal - this.getY())) == 3) {
+                if(Math.abs(xFinal - this.getX()) < 3 && Math.abs(yFinal - this.getY()) < 3) {
+                    return true;
+                } else {
+                    return false;
+                }
             } else {
                 return false;
             }
