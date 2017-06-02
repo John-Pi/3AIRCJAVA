@@ -17,6 +17,7 @@ public class Echiquier implements BoardGames {
         jeuBlanc = new Jeu(Couleur.BLANC);
         jeuNoir = new Jeu(Couleur.NOIR);
         jeuCourant = jeuBlanc;
+        jeuNonCourant = jeuNoir;
     }
 
 
@@ -82,9 +83,15 @@ public class Echiquier implements BoardGames {
         }
     }
     public boolean isMoveOk(int xInit, int yInit, int xFinal, int yFinal){
-        if(jeuCourant.isMoveOk(xInit,yInit, xFinal,yFinal,true,true) ){
+        if(jeuCourant.isMoveOk(xInit,yInit, xFinal,yFinal,true,true)){
+        if (!somethingOnRoad(xInit,yInit, xFinal,yFinal) ){
+        if (!jeuCourant.isPieceHere(xFinal,yFinal)){
             setMessage("Move Ok");
             return true;
+        }
+
+        }
+
         }
         setMessage("Move non Ok");
         return false;
