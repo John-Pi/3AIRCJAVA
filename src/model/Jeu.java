@@ -41,9 +41,12 @@ public class Jeu implements Game {
 
     @Override
     public boolean isPieceHere(int x, int y) {
-        return (findPiece(x, y) != null);
+        if(findPiece(x, y) != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
-
     @Override
     public boolean isMoveOk(int xInit, int yInit, int xFinal, int yFinal, boolean isCatchOk, boolean isCastlingPossible) {
         Pieces piece = findPiece(xInit, yInit);
@@ -100,4 +103,15 @@ public class Jeu implements Game {
             return null;
         }
     }
+    public String getPieceName(int x, int y) {
+        Pieces piece = findPiece(x, y);
+        String nom = null;
+
+        if(piece != null) {
+            nom = piece.getName();
+        }
+
+        return nom;
+    }
 }
+
