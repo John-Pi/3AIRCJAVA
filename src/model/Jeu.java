@@ -77,6 +77,8 @@ public class Jeu implements Game {
         ;
         Pieces piece = findPiece(xInit, yInit);
         if (piece != null) {
+
+
             piece.move(xFinal, yFinal);
             return true;
         } else {
@@ -87,7 +89,8 @@ public class Jeu implements Game {
 
     @Override
     public boolean capture(int xCatch, int yCatch) {
-        return false;
+        findPiece(xCatch, yCatch).capture();
+        return true;
     }
 
     /**

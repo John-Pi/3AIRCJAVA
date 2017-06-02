@@ -30,7 +30,8 @@ public abstract class AbstractPiece implements Pieces {
     */
     public boolean capture() {
         isCaptured = true;
-        move(-1, -1);
+        this.coord.x =-1;
+        this.coord.y = -1;
         return isCaptured;
     }
 
