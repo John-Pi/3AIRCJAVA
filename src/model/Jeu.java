@@ -7,18 +7,28 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by Johnpi on 31/05/2017.
+ * Created by Jean Multigner et Delphine Collin
+ * 
+ * 
  */
 public class Jeu implements Game {
     private Couleur couleur;
     private List<Pieces> listPiece;
 
+    /**
+     *
+     * @param couleur
+     */
     public Jeu(Couleur couleur) {
         this.couleur = couleur;
 
         listPiece = ChessPiecesFactory.newPieces(couleur);
     }
 
+    /*
+    * Parcours la liste de piece
+    * @return la piece qui se trouve aux coordonnées indiquees en parametre
+    */
     private Pieces findPiece(int x, int y) {
         Pieces piece1 = null;
         for (Pieces piece : listPiece) {
@@ -80,7 +90,12 @@ public class Jeu implements Game {
         return false;
     }
 
-
+    /**
+     *
+     * @return une vue de la liste des pieces en cours ne donnant que 
+     * des acces en lecture sur des PieceIHM (type piece + couleur 
+     * + liste de coordonnees)
+     */
     public List<PieceIHMs> getPiecesIHM(){
         PieceIHMs newPieceIHM = null;
         List<PieceIHMs> list = new LinkedList<PieceIHMs>();
@@ -93,6 +108,12 @@ public class Jeu implements Game {
         return list;
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     * @return la couleur de la piece squi se trouve aux coordonnees indiquees
+     */
     public Couleur getPieceColor(int x, int y) {
         Pieces piece ;
         piece = findPiece(x,y);
@@ -103,6 +124,13 @@ public class Jeu implements Game {
             return null;
         }
     }
+
+    /**
+     *
+     * @param x
+     * @param y
+     * @return le nom de la piece qui se trouve aux coordonnees indiquees
+     */
     public String getPieceName(int x, int y) {
         Pieces piece = findPiece(x, y);
         String nom = null;
