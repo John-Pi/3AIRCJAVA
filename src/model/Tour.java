@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Created by Johnpi on 31/05/2017.
+ * Created by Jean Multigner et Delphine Collin
  */
 public class Tour extends AbstractPiece {
 

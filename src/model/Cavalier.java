@@ -7,7 +7,7 @@ import model.Couleur;
 import static java.lang.Math.abs;
 
 /**
- * Created by Johnpi on 31/05/2017.
+ * Created by Jean Multigner et Delphine Collin
  */
 public class Cavalier extends AbstractPiece {
     public Cavalier(Couleur couleur, Coord coord) {

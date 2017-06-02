@@ -64,10 +64,17 @@ public abstract class AbstractPiece implements Pieces {
         coord.y = yFinal;
         return true;
     }
-    
-    /*
-    * @return true si deplacement legal en fonction des algo de déplacement specifique de chaque piece
-    */
+  
+    /**
+     *
+     * @param xFinal
+     * @param yFinal
+     * @param isCatchOk
+     * @param isCastlingPossible
+     * @return true si dplacement legal en fonction des algo de déplacement specifique de chaque piece
+     */
+
+    @Override
     public abstract boolean isMoveOk(int xFinal,
                                      int yFinal,
                                      boolean isCatchOk,

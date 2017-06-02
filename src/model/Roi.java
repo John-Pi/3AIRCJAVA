@@ -3,7 +3,7 @@ import java.lang.*;
 
 /**
  *
- * @author nrmv4488
+ * @author Jean Multigner et Delphine Collin
  */
 public class Roi extends AbstractPiece{
 
